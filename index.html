@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">TASK PLANNER</h1>
+    </header>
+    <main>
+        <div class="addTask">
+            <div class="addHeading">
+                <img src="assets/add-icon.svg" alt="add task" class="addIcon">
+                <p class="addText">Add new task</p>
+            </div>
+            <form class="addForm">
+                <input class="addInput" type="text" name="add" placeholder="Write task here" autocomplete="off"> 
+                <button type="submit" class="addBtn">ADD TASK</button>
+            </form>
+        </div>
+
+        <div class="filter">
+            <select name="status" class="statusInput">
+                <option value="All">All</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <form class="searchForm">
+                <input class="searchInput" type="search" name="search" placeholder="Search task" autocomplete="off"> 
+                <button type="button" class="searchBtn">SEARCH</button>
+            </form>
+        </div>
+
+        <div class="taskList">
+            <div class="pendingTasks"></div>
+            <div class="completedTasks"></div>
+        </div>
+        
+    </main>
+</body>
+</html>
