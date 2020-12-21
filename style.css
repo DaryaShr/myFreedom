@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f8fe;
+}
+
+header {
+    width: 100%;
+    background-color: #594c91;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+}
+.logo {
+    font-size: 50px;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
+    margin: 20px auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 30px;
+}
+
+.addTask {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px 3px rgba(13, 13, 13, 0.04);
+    padding: 20px;
+}
+
+.addHeading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.addIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.addText {
+    color: #555;
+}
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.addInput {
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #b1a5de;
+    padding: 1%;
+    font-size: 20px;
+}
+
+.addBtn {
+    width: 150px;
+    font-size: 15px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #594c91;
+    border: none;
+    outline: none;
+}
+
+.addBtn:hover {
+    background-color: #7668B4;
+    cursor: pointer;
+}
+
+.filter {
+    margin: 30px 0;
+    display: flex;
+}
+
+.statusInput {
+    outline: none;
+    border: 1px solid #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #555;
+    background-color: transparent;
+    margin-right: 100px;
+    padding: 5px;
+}
+
+.searchInput {
+    outline: none;
+    border: 1px solid #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #555;
+    padding: 8px;
+}
+
+input::-webkit-input-placeholder { 
+    color: #c3c9cf;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+input[type='search']::-webkit-search-decoration, 
+input[type='search']::-webkit-search-cancel-button, 
+input[type='search']::-webkit-search-results-button, 
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+.searchBtn {
+    width: 150px;
+    font-size: 15px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #594c91;
+    border: none;
+    outline: none;
+}
+
+.searchBtn:hover {
+    background-color: #7668B4;
+    cursor: pointer;
+}
+
+.pendingTasks, .completedTasks {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItem {
+    display: grid;
+    grid-template-columns: 0.3fr 4fr 0.8fr 0.2fr 0.3fr;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.completed {
+    background-color: #b6bf85;
+}
+
+.pending {
+    background-color: #b1a5de;
+}
+
+.itemStatus {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+
+.itemText {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.saveBtn {
+    width: 100px;
+    font-size: 15px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #594c91;
+    border: none;
+    outline: none;
+}
+
+.saveBtn:disabled {
+    background-color: transparent;
+    color: transparent;
+}
+
+.saveBtn:hover {
+    background-color: #7668B4;
+    cursor: pointer;
+}
+
+.saveBtn:disabled:hover {
+    background-color: transparent;
+    color: transparent;
+    cursor: auto;
+}
+
+.saveBtn::before {
+    content: 'SAVE';
+}
+
+.editBtn, .deleteBtn {
+    align-self: center;
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.editBtn:hover, .deleteBtn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.editIcon, .deleteIcon {
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .saveBtn {
+        width: 40px;
+        padding: 10px 5px;
+    }
+
+    .saveBtn::before {
+        content: '✔';
+    }
+
+    .listItem {
+        grid-template-columns: 0.3fr 4.5fr 0.7fr 0.5fr 0.5fr;
+    }
+
+}
+
+@media (max-width: 665px) {
+
+    .filter {
+        flex-direction: column;
+    }
+
+    .statusInput {
+        width: 150px;
+        margin-bottom: 30px;
+    }
+
+    .listItem {
+        padding: 20px 10px;
+    }
+
+    .itemStatus {
+        width: 20px;
+        height: 20px;
+    }
+
+    .itemText {
+        font-size: 15px;
+    }
+
+    .editBtn, .deleteBtn {
+        height: 20px;
+        width: 20px;
+    }
+
+    .saveBtn {
+        width: 25px;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 449px) {
+
+    .statusInput {
+        width: 100%;
+    }
+
+    .searchInput {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .searchBtn {
+        width: 100%;
+    }
+
+    /* .listItem {
+        grid-template-columns: 0.5fr 1.5fr 0.7fr 0.5fr 0.5fr;
+    } */
+
+    .itemText {
+        width: 150px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .listItem {
+        grid-template-columns: 0.5fr 1.5fr 0.7fr 0.5fr 0.5fr;
+    }
+}
+
+
+
